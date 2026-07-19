@@ -1,0 +1,124 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Global Safety Net (Pillar 1)
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Reuseable global helpers (Pillar 3)
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    // Entity Validations (Pillar 2)
+    function isValidUser(data) {
+      return data.uid is string 
+        && data.uid.size() <= 128 
+        && data.name is string 
+        && data.name.size() <= 100
+        && data.email is string 
+        && data.email.size() <= 100
+        && data.photoURL is string 
+        && data.photoURL.size() <= 1000
+        && data.xp is int
+        && data.xp >= 0
+        && data.streak is int
+        && data.streak >= 0
+        && data.avgExamScore is number
+        && data.avgExamScore >= 0
+        && data.avgExamScore <= 100
+        && data.totalExams is int
+        && data.totalExams >= 0;
+    }
+
+    function isValidUserStats(data) {
+      return data.uid is string
+        && data.uid.size() <= 128
+        && data.streak is int
+        && data.streak >= 0
+        && data.answeredQuestions is map;
+    }
+
+    function isValidExamResult(data) {
+      return data.id is string
+        && data.id.size() <= 128
+        && data.part is int
+        && (data.part == 1 || data.part == 2)
+        && data.score is number
+        && data.score >= 0
+        && data.score <= 100
+        && data.correctCount is int
+        && data.correctCount >= 0
+        && data.totalCount is int
+        && data.totalCount >= 0
+        && data.timeSpent is int
+        && data.timeSpent >= 0
+        && data.date is string;
+    }
+
+    // Rules for Users
+    match /users/{userId} {
+      allow get: if isSignedIn();
+      allow list: if isSignedIn(); // Let users read user lists for leaderboards safely
+      
+      allow create: if isOwner(userId) 
+        && isValidId(userId)
+        && isValidUser(incoming())
+        && incoming().createdAt is string; // Immortal Field Rule for createdAt (Pillar 12)
+        
+      allow update: if isOwner(userId) 
+        && isValidId(userId)
+        && isValidUser(incoming())
+        && incoming().createdAt == existing().createdAt; // Prevent modifying creation date
+        
+      allow delete: if false; // Users cannot delete their profile
+
+      // User Stats Sub-collection
+      match /stats/progress {
+        allow get: if isOwner(userId);
+        
+        allow create: if isOwner(userId)
+          && isValidUserStats(incoming());
+          
+        allow update: if isOwner(userId)
+          && isValidUserStats(incoming());
+          
+        allow delete: if false;
+      }
+
+      // Exam Results Sub-collection
+      match /history/{examId} {
+        allow get: if isOwner(userId);
+        allow list: if isOwner(userId);
+        
+        allow create: if isOwner(userId)
+          && isValidId(examId)
+          && isValidExamResult(incoming());
+          
+        allow update: if isOwner(userId)
+          && isValidId(examId)
+          && isValidExamResult(incoming());
+          
+        allow delete: if isOwner(userId) && isValidId(examId);
+      }
+    }
+  }
+}

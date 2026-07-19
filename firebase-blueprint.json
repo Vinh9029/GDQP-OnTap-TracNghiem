@@ -1,0 +1,122 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile with experience, streak, and statistics",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "description": "Unique user identifier"
+        },
+        "name": {
+          "type": "string",
+          "description": "User full name"
+        },
+        "email": {
+          "type": "string",
+          "description": "User email address"
+        },
+        "photoURL": {
+          "type": "string",
+          "description": "User avatar URL"
+        },
+        "xp": {
+          "type": "integer",
+          "description": "Total experience points earned"
+        },
+        "streak": {
+          "type": "integer",
+          "description": "Current consecutive login streak"
+        },
+        "avgExamScore": {
+          "type": "number",
+          "description": "Average score in exam history"
+        },
+        "totalExams": {
+          "type": "integer",
+          "description": "Total number of exams completed"
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "ISO timestamp of user creation"
+        }
+      },
+      "required": ["uid", "name", "email", "xp", "streak"]
+    },
+    "UserStats": {
+      "title": "UserStats",
+      "description": "Detailed progress tracking and answered questions for each user",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "description": "Unique user identifier"
+        },
+        "streak": {
+          "type": "integer",
+          "description": "Current consecutive login streak"
+        },
+        "lastActiveDate": {
+          "type": "string",
+          "description": "ISO date of last practice activity"
+        },
+        "answeredQuestions": {
+          "type": "object",
+          "description": "Map of question ID to correctness boolean"
+        }
+      },
+      "required": ["uid", "streak", "answeredQuestions"]
+    },
+    "ExamResult": {
+      "title": "ExamResult",
+      "description": "Detailed result of a taken exam",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique exam result identifier"
+        },
+        "part": {
+          "type": "integer",
+          "description": "Exam Part 1 or Part 2"
+        },
+        "score": {
+          "type": "number",
+          "description": "Exam score percentage"
+        },
+        "correctCount": {
+          "type": "integer",
+          "description": "Number of correct answers"
+        },
+        "totalCount": {
+          "type": "integer",
+          "description": "Total number of questions in exam"
+        },
+        "timeSpent": {
+          "type": "integer",
+          "description": "Time spent in seconds"
+        },
+        "date": {
+          "type": "string",
+          "description": "ISO date of the exam"
+        }
+      },
+      "required": ["id", "part", "score", "correctCount", "totalCount", "timeSpent", "date"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "Root collection for user profiles"
+    },
+    "/users/{userId}/stats/progress": {
+      "schema": "UserStats",
+      "description": "User progress statistics and active state"
+    },
+    "/users/{userId}/history/{examId}": {
+      "schema": "ExamResult",
+      "description": "Sub-collection of user exam histories"
+    }
+  }
+}
