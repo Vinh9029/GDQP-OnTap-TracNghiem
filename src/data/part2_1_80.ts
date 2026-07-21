@@ -32,7 +32,7 @@ export const part2_1_80: Question[] = [
       "Xóa bỏ vai trò tổ chức của Quân đội nhân dân Việt Nam",
       "Xóa bỏ vai trò quản lý của Công an nhân dân Việt Nam"
     ],
-    answer: 3
+    answer: 1
   },
   {
     id: 4,
@@ -241,7 +241,7 @@ export const part2_1_80: Question[] = [
       "Phát triển toàn diện chính trị, kinh tế, văn hóa, xã hội, an ninh - quốc phòng trên địa bàn dân tộc và miền núi",
       "Các dân tộc Việt Nam có tinh thần đoàn kết gắn bó xây dựng quốc gia dân tộc thống nhất"
     ],
-    answer: 1
+    answer: 2
   },
   {
     id: 23,
@@ -252,7 +252,7 @@ export const part2_1_80: Question[] = [
       "Nguồn gốc tình cảm",
       "Nguồn gốc nhân dân"
     ],
-    answer: 2
+    answer: 1
   },
   {
     id: 24,
@@ -307,7 +307,7 @@ export const part2_1_80: Question[] = [
       "Tính tín ngưỡng",
       "Tính dân chủ"
     ],
-    answer: 0
+    answer: 2
   },
   {
     id: 29,
@@ -351,7 +351,7 @@ export const part2_1_80: Question[] = [
       "Chăm lo nâng cao đời sống vật chất tinh thần của đồng bào các dân tộc, tôn giáo",
       "Đoàn kết, tôn trọng, giúp đỡ lẫn nhau giữa sinh viên các dân tộc, các tôn giáo"
     ],
-    answer: 1
+    answer: 2
   },
   {
     id: 33,
@@ -362,7 +362,7 @@ export const part2_1_80: Question[] = [
       "Chăm lo nâng cao đời sống vật chất, tinh thần của đồng bào các dân tộc, tôn giáo",
       "Giải quyết vấn đề tôn giáo phải gắn với quá trình cải tạo xã hội cũ, xây dựng xã hội mới"
     ],
-    answer: 0
+    answer: 1
   },
   {
     id: 34,
@@ -373,7 +373,7 @@ export const part2_1_80: Question[] = [
       "Khách thể của các tội phạm về môi trường là sự xâm phạm vào các quy định trong việc bảo vệ môi trường",
       "Mặt khách quan của các tội phạm về môi trường được thể hiện bởi những hành vi nguy hiểm cho xã hội"
     ],
-    answer: 1
+    answer: 0
   },
   {
     id: 35,
@@ -384,7 +384,7 @@ export const part2_1_80: Question[] = [
       "Tội phạm về môi trường là hành vi nguy hiểm cho xã hội được quy định trong Bộ luật hình sự, do người có năng lực trách nhiệm hình sự",
       "Các tội phạm về môi trường được thực hiện dưới hình thức lỗi cố ý hoặc vô ý"
     ],
-    answer: 1
+    answer: 0
   },
   {
     id: 36,
@@ -395,7 +395,7 @@ export const part2_1_80: Question[] = [
       "Vi phạm pháp luật về môi trường nói chung phần lớn đều có động cơ, mục đích tư lợi cá nhân",
       "Hầu hết tội phạm về môi trường thực hiện hành vi phạm tội dưới hình thức lỗi cố ý"
     ],
-    answer: 1
+    answer: 0
   },
   {
     id: 37,
@@ -461,7 +461,7 @@ export const part2_1_80: Question[] = [
       "7",
       "8"
     ],
-    answer: 1
+    answer: 0
   },
   {
     id: 43,
@@ -505,7 +505,7 @@ export const part2_1_80: Question[] = [
       "Biện pháp động viên",
       "Biện pháp xã hội"
     ],
-    answer: 1
+    answer: 0
   },
   {
     id: 47,
@@ -758,7 +758,7 @@ export const part2_1_80: Question[] = [
       "Một nhiệm vụ của công tác bảo đảm trật tự, an toàn giao thông.",
       "Tuyên truyền những hành vi vi phạm pháp luật về bảo đảm trật tự, an toàn giao thông do cá nhân, tổ chức thực hiện."
     ],
-    answer: 3
+    answer: 1
   },
   {
     id: 70,
@@ -780,7 +780,7 @@ export const part2_1_80: Question[] = [
       "Thường vụ Quốc hội, Hội đồng nhân dân",
       "Quốc hội, Hội đồng nhân dân cấp huyện"
     ],
-    answer: 3
+    answer: 0
   },
   {
     id: 72,
@@ -813,7 +813,7 @@ export const part2_1_80: Question[] = [
       "Các cơ quan quản lý văn hóa, giáo dục, giao thông, dịch vụ, du lịch",
       "Chính phủ và Hội đồng nhân dân các cấp."
     ],
-    answer: 3
+    answer: 0
   },
   {
     id: 75,
@@ -835,7 +835,7 @@ export const part2_1_80: Question[] = [
       "Nông dân",
       "Công nhân"
     ],
-    answer: 3
+    answer: 0
   },
   {
     id: 77,

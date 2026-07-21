@@ -120,7 +120,7 @@ export const part2_81_160: Question[] = [
       "Việc thực thi pháp luật còn chưa hiệu quả, kỷ cương phép nước chưa nghiêm",
       "Trình độ nghiệp vụ, pháp luật của một bộ phận cán bộ chuyên trách chưa đáp ứng yêu cầu thực tiễn"
     ],
-    answer: 2
+    answer: 0
   },
   {
     id: 92,
@@ -131,7 +131,7 @@ export const part2_81_160: Question[] = [
       "Nội dung, hình thức giáo dục còn nhiều bất cập, đặc biệt ở vùng sâu, vùng xa, vùng đồng bào dân tộc",
       "Kinh tế thị trường càng làm xuống cấp về đạo đức, văn hoá"
     ],
-    answer: 1
+    answer: 0
   },
   {
     id: 93,
@@ -164,7 +164,7 @@ export const part2_81_160: Question[] = [
       "Mở các đợt cao điểm tấn công trấn áp tội phạm bảo vệ an toàn các sự kiện chính trị",
       "Nâng cao chất lượng công tác điều tra, truy tố, xét xử tội phạm"
     ],
-    answer: 3
+    answer: 0
   },
   {
     id: 96,
@@ -186,7 +186,7 @@ export const part2_81_160: Question[] = [
       "Nâng cao chất lượng công tác điều tra, truy tố, xét xử tội phạm",
       "Điều tra xử lý các vụ án về kinh tế, chức vụ và tham nhũng"
     ],
-    answer: 1
+    answer: 0
   },
   {
     id: 98,
@@ -208,7 +208,7 @@ export const part2_81_160: Question[] = [
       "Tội cưỡng dâm",
       "Tội sử dụng người dưới 16 tuổi vào mục đích khiêu dâm"
     ],
-    answer: 3
+    answer: 1
   },
   {
     id: 100,
@@ -461,7 +461,7 @@ export const part2_81_160: Question[] = [
       "Nâng cao ý thức phòng tránh, tự vệ khi tham gia mạng xã hội",
       "Tự trau dồi kỹ năng nhận diện âm mưu, thủ đoạn gây nguy cơ mất an ninh mạng"
     ],
-    answer: 1
+    answer: 0
   },
   {
     id: 123,
@@ -472,7 +472,7 @@ export const part2_81_160: Question[] = [
       "Luật An ninh mạng nhằm bảo vệ người dùng hợp pháp trên không gian mạng",
       "Thực hiện đúng Luật là bảo vệ chính mình, người thân và gia đình, đồng thời, góp phần bảo vệ an ninh quốc gia"
     ],
-    answer: 3
+    answer: 0
   },
   {
     id: 124,
@@ -483,7 +483,7 @@ export const part2_81_160: Question[] = [
       "Bảo vệ an ninh mạng đối với hệ thống thông tin quan trọng về an ninh quốc gia",
       "Bảo đảm an toàn thông tin mạng"
     ],
-    answer: 3
+    answer: 0
   },
   {
     id: 125,
@@ -780,7 +780,7 @@ export const part2_81_160: Question[] = [
       "9",
       "10"
     ],
-    answer: 1
+    answer: 2
   },
   {
     id: 152,
@@ -857,7 +857,7 @@ export const part2_81_160: Question[] = [
       "An ninh mạng",
       "Vấn đề dân tộc"
     ],
-    answer: 2
+    answer: 3
   },
   {
     id: 159,
@@ -879,6 +879,6 @@ export const part2_81_160: Question[] = [
       "Đại hội X",
       "Đại hội XI"
     ],
-    answer: 2
+    answer: 3
   }
 ];

@@ -18,8 +18,7 @@ import { UserProfile, UserStats, ExamResult } from "../types";
 // Check if Firebase keys are fully defined
 export const isFirebaseConfigured = !!(
   firebaseConfig.apiKey && 
-  firebaseConfig.projectId && 
-  firebaseConfig.projectId !== "astral-host-3zp2g" // Skip template placeholder to avoid using invalid credentials
+  firebaseConfig.projectId
 );
 
 let firebaseApp;

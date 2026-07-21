@@ -1,5 +1,5 @@
 {
-  "name": "Trắc nghiệm GDQP-AN",
+  "name": "Ôn luyện GDQP-AN",
   "description": "Ứng dụng ôn thi trắc nghiệm Giáo dục Quốc phòng và An ninh Học phần 1 và 2 với trợ lý giải thích AI.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
